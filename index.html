@@ -143,22 +143,26 @@
 </div>
 
 
-      <div class="card">
+      <div class="card ">
         <h3>Sentiment Analysis</h3>
 
-        <div class="sentiment positive" id="sentiment-positive">Positive</div>
-<div class="sentiment neutral" id="sentiment-neutral">Neutral</div>
-<div class="sentiment negative" id="sentiment-negative">Negative</div>
+        <div class="sentiment-cards">
+          <div class="sentiment positive" id="sentiment-positive">Positive</div>
+          <div class="sentiment neutral" id="sentiment-neutral">Neutral</div>
+          <div class="sentiment negative" id="sentiment-negative">Negative</div>
+        </div>
 
-<input
-  type="text"
-  id="remarks-search"
-  placeholder="Search remarks or area..."
-  class="search-box"
-/>
+        <input
+          type="text"
+          id="remarks-search"
+          placeholder="Search remarks or area..."
+          class="search-box"
+        />
 
-<div class="remarks-list" id="remarks-list"></div>
-
+        <div class="remarks-list" id="remarks-list">
+          <!-- Remarks will be injected here -->
+        </div>
+      </div>
 
     </section>
 
