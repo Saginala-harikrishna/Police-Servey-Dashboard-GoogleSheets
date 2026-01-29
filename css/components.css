@@ -1,0 +1,99 @@
+/* ===== CARD ===== */
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid var(--border);
+}
+
+/* ===== FILTERS ===== */
+.filters-section {
+  margin-bottom: 24px;
+}
+
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.filters-header h2 {
+  font-size: 18px;
+}
+
+.filters-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+}
+
+.filter-item label {
+  font-size: 13px;
+  color: var(--text-light);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.filter-item select,
+.filter-item input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+/* ===== BUTTON ===== */
+.btn-clear {
+  background: none;
+  border: none;
+  color: var(--secondary);
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===== KPI CARDS ===== */
+.kpi-card h3 {
+  font-size: 14px;
+  color: var(--text-light);
+  margin-bottom: 6px;
+}
+
+.kpi-value {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.kpi-subtext {
+  font-size: 12px;
+  color: var(--text-light);
+}
+
+.kpi-card.success {
+  border-left: 6px solid var(--success);
+}
+
+.kpi-card.danger {
+  border-left: 6px solid var(--danger);
+}
+
+/* ===== TABS ===== */
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tab {
+  padding: 8px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: #f9fafb;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.tab.active {
+  background: var(--primary);
+  color: #ffffff;
+}

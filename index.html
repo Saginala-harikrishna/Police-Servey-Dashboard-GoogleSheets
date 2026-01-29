@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mahila Suraksha Dashboard</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/dashboard.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="app-header">
+    <div class="header-left">
+      <div class="logo">🛡️</div>
+      <div>
+        <h1>Mahila Suraksha Dashboard</h1>
+        <p>Anantapur District Police – Women Safety Analytics</p>
+      </div>
+    </div>
+
+    <div class="header-right">
+      <span class="demo-badge">Demo Mode</span>
+    </div>
+  </header>
+
+  <!-- ================= MAIN CONTENT ================= -->
+  <main class="container">
+
+    <!-- ========== FILTER SECTION ========== -->
+    <section class="card filters-section">
+      <div class="filters-header">
+        <h2>Filters</h2>
+        <button class="btn-clear" id="clear-filters">Clear All</button>
+      </div>
+
+      <div class="filters-grid">
+
+        <div class="filter-item">
+          <label for="filter-area">Sachivalayam Area</label>
+          <select id="filter-area">
+            <option value="All">All Areas</option>
+          </select>
+        </div>
+
+        <div class="filter-item">
+          <label>Date Range</label>
+          <div class="date-range">
+            <input type="date" id="filter-start-date" />
+            <input type="date" id="filter-end-date" />
+          </div>
+        </div>
+
+        <div class="filter-item">
+          <label for="filter-age">Age Group</label>
+          <select id="filter-age">
+            <option value="All">All Ages</option>
+          </select>
+        </div>
+
+        <div class="filter-item">
+          <label for="filter-category">Problem Category</label>
+          <select id="filter-category">
+            <option value="All">All Categories</option>
+          </select>
+        </div>
+
+        <div class="filter-item">
+          <label for="filter-sentiment">Sentiment</label>
+          <select id="filter-sentiment">
+            <option value="All">All Sentiments</option>
+          </select>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========== KPI CARDS ========== -->
+    <section class="kpi-grid">
+
+      <div class="card kpi-card">
+        <h3>Total Surveys</h3>
+        <p class="kpi-value" id="kpi-total-surveys">0</p>
+        <span class="kpi-subtext">responses collected</span>
+      </div>
+
+      <div class="card kpi-card">
+        <h3>Sachivalayam Areas</h3>
+        <p class="kpi-value" id="kpi-total-areas">0</p>
+        <span class="kpi-subtext">covered</span>
+      </div>
+
+      <div class="card kpi-card success">
+        <h3>Positive Feedback</h3>
+        <p class="kpi-value" id="kpi-positive-percent">0%</p>
+      </div>
+
+      <div class="card kpi-card danger">
+        <h3>Needs Attention</h3>
+        <p class="kpi-value" id="kpi-negative-percent">0%</p>
+      </div>
+
+    </section>
+
+    <!-- ========== CHARTS ROW 1 ========== -->
+    <section class="grid-2">
+
+      <div class="card">
+        <h3>Area-wise Survey Distribution</h3>
+       <div class="chart-placeholder">
+  <canvas id="areaWiseChart"></canvas>
+</div>
+
+      </div>
+
+      <div class="card">
+        <h3>Problem Category Breakdown</h3>
+      <div class="chart-placeholder">
+  <canvas id="problemCategoryChart"></canvas>
+</div>
+
+      </div>
+
+    </section>
+
+    <!-- ========== CHARTS ROW 2 ========== -->
+    <section class="grid-2">
+
+      <div class="tabs">
+  <button class="tab active" data-tab="age">Age Groups</button>
+  <button class="tab" data-tab="occupation">Occupation</button>
+  <button class="tab" data-tab="daynight">Day vs Night</button>
+</div>
+
+<div class="chart-placeholder">
+  <canvas id="demographicChart"></canvas>
+</div>
+
+
+      <div class="card">
+        <h3>Sentiment Analysis</h3>
+
+        <div class="sentiment positive" id="sentiment-positive">Positive</div>
+<div class="sentiment neutral" id="sentiment-neutral">Neutral</div>
+<div class="sentiment negative" id="sentiment-negative">Negative</div>
+
+<input
+  type="text"
+  id="remarks-search"
+  placeholder="Search remarks or area..."
+  class="search-box"
+/>
+
+<div class="remarks-list" id="remarks-list"></div>
+
+
+    </section>
+
+  </main>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script src="js/config.js"></script>
+<script src="js/state.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/dataService.js"></script>
+<script src="js/dashboard.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/sentiment.js"></script>
+<script src="js/main.js"></script>
+
+
+
+</body>
+</html>
