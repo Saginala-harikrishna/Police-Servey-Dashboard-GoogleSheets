@@ -318,3 +318,133 @@ canvas {
   font-weight: 600;
 }
 
+
+/* =========================================================
+   RESPONSIVE DESIGN – TABLET & MOBILE
+   Add this at the END of your CSS
+========================================================= */
+
+/* ---------- TABLETS (≤ 1024px) ---------- */
+@media (max-width: 1024px) {
+
+  .filters-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  .sentiment-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .container {
+    padding: 0 14px;
+  }
+}
+
+/* ---------- MOBILE (≤ 768px) ---------- */
+@media (max-width: 768px) {
+
+  /* Header */
+  .app-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .header-left h1 {
+    font-size: 17px;
+  }
+
+  .header-left p {
+    font-size: 12px;
+  }
+
+  /* Filters */
+  .filters-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  /* KPI Cards */
+  .kpi-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .kpi-value {
+    font-size: 22px;
+  }
+
+  /* Charts */
+  .chart-placeholder {
+    height: 200px;
+  }
+
+  /* Tabs */
+  .tabs {
+    gap: 12px;
+  }
+
+  .tab {
+    width: 100%;
+    text-align: center;
+    padding: 12px 16px;
+  }
+
+  /* Sentiment */
+  .sentiment-cards {
+    grid-template-columns: 1fr;
+  }
+
+  /* Remarks */
+  .remark {
+    font-size: 12px;
+  }
+}
+
+/* ---------- SMALL MOBILES (≤ 480px) ---------- */
+@media (max-width: 480px) {
+
+  body {
+    font-size: 13px;
+  }
+
+  .header-left h1 {
+    font-size: 16px;
+  }
+
+  .demo-badge {
+    font-size: 11px;
+    padding: 5px 10px;
+  }
+
+  .card,
+  .filters-section {
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .kpi-card {
+    padding: 14px;
+  }
+
+  .kpi-value {
+    font-size: 20px;
+  }
+
+  .search-box {
+    font-size: 12px;
+  }
+}
